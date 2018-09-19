@@ -19,7 +19,8 @@ for (Integer[] i: tests) {
 
 }
     public static void ReverseSorter(Integer[] unsort){
-        Arrays.sort(unsort);
+        Integer[] notinplace = Arrays.copyOf(unsort,unsort.length);
+	Arrays.sort(notinplace);
         for(int j = 0; j < unsort.length/2; j++) {
             int temp = unsort[j];
             unsort[j] = unsort[unsort.length - j - 1];
